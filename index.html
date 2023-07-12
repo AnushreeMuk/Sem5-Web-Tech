@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sem 5 Assignment 1</title>
+</head>
+
+<style>
+.unsplash{
+    position: absolute;
+    margin: 0%;
+    top:0%;
+    left:0%;
+} 
+
+.logo{
+    position: absolute;
+    left: 62%;
+    top:0%;
+}
+
+.fullname{
+    position: absolute;
+    left: 50%;
+    top:30%;
+    background-color: rgb(244, 213, 172);
+    border-radius: 10px;
+}
+
+.Email{
+    position: absolute;
+    left: 50%;
+    top:36%;
+    background-color: rgb(244, 213, 172);
+    border-radius: 10px;
+}
+
+.Password{
+    position: absolute;
+    left: 50%;
+    top:42%;
+    background-color: rgb(244, 213, 172);
+    border-radius: 10px;
+}
+
+.ConfirmPassword{
+    position: absolute;
+    left: 50%;
+    top:48%;
+    background-color: rgb(244, 213, 172);
+    border-radius: 10px;  
+}
+
+.Submit{
+    position: absolute;
+    left: 50%;
+    top:58%;
+    width: 600px;
+    height: 50px;
+    font-size: 22px;  
+    background-color: rgb(202, 143, 65); 
+    border-radius: 20px;
+}
+
+.Account{
+    position: absolute;
+    left: 63%;
+    top:66%;
+}
+
+.app{
+    position: absolute;
+    bottom:10%;
+    left:59%;
+}
+
+.error-message {
+    position: absolute;
+    left: 51%;
+    top: 51.4%;
+    color: red;
+}
+
+</style>
+
+<body style="background-color: antiquewhite;">
+    <div>
+        <img class="unsplash" src="natali-hordiiuk-fC3ZnfvdTxA-unsplash.jpg" alt="unsplash image"  width="640" height="750">
+        <img class="logo" src="logo-removebg-preview.png" alt="logo image" width="260" height="180">
+        <img class="app" src="apps-removebg-preview.png"
+        alt="app image" width="340" height="100">
+    </div>
+    <textarea class="fullname" name="name" rows="2" cols="80">Full Name</textarea>
+    <textarea class="Email" name="email" rows="2" cols="80">Email</textarea>
+    <textarea class="Password" name="password" rows="2" cols="80">Password</textarea>
+    <textarea class="ConfirmPassword" name="confirmpassword" rows="2" cols="80">Confirm Password</textarea>
+    <input class="Submit" type="submit" value="Sign Up">
+<div class="Account">Already have an account ?<u>Log In</u></div>
+<p class="error-message"></p>
+<script>
+    const confirmPasswordInput = document.querySelector('.ConfirmPassword');
+    const errorMessage = document.querySelector('.error-message');
+
+    function validateConfirmPassword() {
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (confirmPassword.length < 8) {
+            errorMessage.textContent = 'Password must be at least 8 characters long.';
+        } else {
+            errorMessage.textContent = '';
+        }
+    }
+
+    confirmPasswordInput.addEventListener('input', validateConfirmPassword);
+
+    </script>
+</html>
