@@ -11,9 +11,9 @@
 <style>
 .unsplash{
     position: absolute;
-    margin: 0%;
     top:0%;
     left:0%;
+    width: auto;
 } 
 
 .logo{
@@ -27,6 +27,8 @@
     left: 50%;
     top:30%;
     background-color: rgb(244, 213, 172);
+    width: 600px;
+    height: 25px;
     border-radius: 10px;
 }
 
@@ -36,6 +38,8 @@
     top:36%;
     background-color: rgb(244, 213, 172);
     border-radius: 10px;
+    width: 600px;
+    height: 25px;
 }
 
 .Password{
@@ -44,6 +48,8 @@
     top:42%;
     background-color: rgb(244, 213, 172);
     border-radius: 10px;
+    width: 600px;
+    height: 25px;
 }
 
 .ConfirmPassword{
@@ -52,6 +58,8 @@
     top:48%;
     background-color: rgb(244, 213, 172);
     border-radius: 10px;  
+    width: 600px;
+    height: 25px;
 }
 
 .Submit{
@@ -79,8 +87,8 @@
 
 .error-message {
     position: absolute;
-    left: 51%;
-    top: 51.4%;
+    left: 50%;
+    top: 50%;
     color: red;
 }
 
@@ -88,17 +96,17 @@
 
 <body style="background-color: antiquewhite;">
     <div>
-        <img class="unsplash" src="natali-hordiiuk-fC3ZnfvdTxA-unsplash.jpg" alt="unsplash image"  width="640" height="750">
+        <img class="unsplash" src="natali-hordiiuk-fC3ZnfvdTxA-unsplash.jpg" alt="unsplash image" width="640" height="750">
         <img class="logo" src="logo-removebg-preview.png" alt="logo image" width="260" height="180">
         <img class="app" src="apps-removebg-preview.png"
         alt="app image" width="340" height="100">
     </div>
-    <textarea class="fullname" name="name" rows="2" cols="80">Full Name</textarea>
-    <textarea class="Email" name="email" rows="2" cols="80">Email</textarea>
-    <textarea class="Password" name="password" rows="2" cols="80">Password</textarea>
-    <textarea class="ConfirmPassword" name="confirmpassword" rows="2" cols="80">Confirm Password</textarea>
+    <input type="text" class="fullname" value="&nbsp;&nbsp;Full Name">
+    <input type="email" class="Email" value="&nbsp;&nbsp;Email">
+    <input type="text" class="Password" value="&nbsp;&nbsp;Password">
+    <input type="text" class="ConfirmPassword" value="&nbsp;&nbsp;Confirm Password">
     <input class="Submit" type="submit" value="Sign Up">
-<div class="Account">Already have an account ?<u>Log In</u></div>
+<p class="Account">Already have an account ?&nbsp;<a href="https://en.wikipedia.org/wiki/Login"></a><u>Log In</u></p>
 <p class="error-message"></p>
 <script>
     const confirmPasswordInput = document.querySelector('.ConfirmPassword');
