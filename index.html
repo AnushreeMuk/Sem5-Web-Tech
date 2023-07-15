@@ -9,6 +9,18 @@
 </head>
 
 <style>
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+.row {
+  display: flex;
+}
+
 .unsplash{
     position: absolute;
     top:0%;
@@ -92,22 +104,27 @@
     color: red;
 }
 
+
 </style>
 
 <body style="background-color: antiquewhite;">
-    <div>
+    <div class="row">
+    <div class="column">
         <img class="unsplash" src="natali-hordiiuk-fC3ZnfvdTxA-unsplash.jpg" alt="unsplash image" width="640" height="750">
+    </div>
+    <div class="column">
         <img class="logo" src="logo-removebg-preview.png" alt="logo image" width="260" height="180">
         <img class="app" src="apps-removebg-preview.png"
         alt="app image" width="340" height="100">
     </div>
-    <input type="text" class="fullname" value="&nbsp;&nbsp;Full Name">
-    <input type="email" class="Email" value="&nbsp;&nbsp;Email">
-    <input type="text" class="Password" value="&nbsp;&nbsp;Password">
-    <input type="text" class="ConfirmPassword" value="&nbsp;&nbsp;Confirm Password">
+    <input type="text" class="fullname" placeholder="&nbsp;&nbsp;Full Name">
+    <input type="email" class="Email" placeholder="&nbsp;&nbsp;Email">
+    <input type="text" class="Password" placeholder="&nbsp;&nbsp;Password">
+    <input type="text" class="ConfirmPassword" placeholder="&nbsp;&nbsp;Confirm Password">
     <input class="Submit" type="submit" value="Sign Up">
 <p class="Account">Already have an account ?&nbsp;<a href="https://en.wikipedia.org/wiki/Login"></a><u>Log In</u></p>
 <p class="error-message"></p>
+</div>
 <script>
     const confirmPasswordInput = document.querySelector('.ConfirmPassword');
     const errorMessage = document.querySelector('.error-message');
